@@ -28,3 +28,25 @@ function Color_Function(){//using function
     }
     document.getElementById('Output').innerHTML = Color_Output;
 }
+function Hello_World_Function(){//using the getElementsByClassName
+    var A = document.getElementsByClassName('Click');
+    A[0].innerHTML = 'The text has changed!';//[0] will only the string on the 
+    //first element with the class name 'Click'
+}
+//using JS to draw a circle in html canvas tag
+var C = document.getElementById('ID_Name');
+var ctx = C.getContext('2d');
+ctx.beginPath();
+//first number is for width, second is for height, third is for circle size
+//forth number doesn't stop the line (1 will stop the line of the circle a little)
+//(2 will stop the line more and so on) fifth number is how many times to times PI 
+//to get the radius(times 1 will get half circle more then 2 will just draw lines over the circle)
+ctx.arc(250, 125, 70, 0, 2*Math.PI);
+ctx.stroke();
+var D = document.getElementById('Gradient');
+var ctx2 = D.getContext('2d');
+var grd = ctx2.createLinearGradient(0, 0, 170, 0);
+grd.addColorStop(0, 'black');
+grd.addColorStop(1, 'white');
+ctx2.fillStyle = grd;
+ctx2.fillRect(20, 20, 150, 100);
