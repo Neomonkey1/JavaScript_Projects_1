@@ -7,15 +7,15 @@
     <body>
         <!--making a form-->
         <div class="container">
-            <form action="">
+            <form name="myForm" action="" onsubmit="event.preventDefault(); validateForm()" method="post">
                 <label for="fname">First name:</label><br>
-                <input type="text" id="fname" name="fname" value=""><br>
+                <input type="text" id="First name" name="fname" value=""><br>
                 <label for="lname">Last name:</label><br>
-                <input type="text" id="lname" name="lname" value=""><br>
+                <input type="text" id="Last name" name="lname" value=""><br>
                 <label for="email">Email:</label><br>
-                <input type="text" id="email" name="email" value=""><br>
+                <input type="text" id="Email" name="email" value=""><br>
                 <label for="message">Comments:</label><br>
-                <input type="text" id="message" name="message" value=""><br><br>
+                <input type="text" id="Message" name="message" value=""><br><br>
                 <input type="submit" value="Submit">
             </form>
         </div>    
