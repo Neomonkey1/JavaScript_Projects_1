@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Using JSON.STRINGIFY() method</h1>
+        <p id="myDog"></p>
+        <script>
+            /*JS dictionary object*/
+            var dog = {name: "Oreo", breed: "Pitbull", color:"White and Black"};
+            /*convert JS objects to string format*/
+            var JSONstring = JSON.stringify(dog);
+            document.getElementById('myDog').innerHTML = JSONstring;            
+        </script>
+        <h2>JSON.PARSE() method</h2>
+        <p id="myDog2"></p>
+        <script>
+            /*This is a JSON string variable*/
+            var dog2 = '{"name": "Oreo", "breed": "Pitbull", "color": "White and Black"}';
+            /*Convert JSON string to JS objects*/
+            var JSONstring = JSON.parse(dog2);
+            document.getElementById('myDog2').innerHTML = JSONstring.name + " the "
+            + JSONstring.breed;
+        </script>
+        <h3>LOCALSTORAGE() method</h3>
+        <p id="myDog3"></p>
+        <script>
+            /*set the data as a key/value pair to be saved locally in your browser*/
+             localStorage.setItem("Name", "Oreo");
+            /*then use the key "Name" to return it's value */
+            document.getElementById(myDog3).innerHTML = localStorage.getItem("Name");
+        </script>
+
+
+    </body>
+</html>
