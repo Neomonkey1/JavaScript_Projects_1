@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Using the ondblclick event handler</h1>
+        <p ondblclick="myFunc()" id="change">
+            Double click on this paragraph element to change it
+            from black to blue!
+        </p>
+        <script>
+            function myFunc(){
+                document.getElementById('change').style.color= 'blue';
+            }
+        </script>
+    </body>
+</html>
